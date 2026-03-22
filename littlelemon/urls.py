@@ -20,5 +20,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("restaurant/", include("restaurant.urls")),  # resto applink
+    path("", include("restaurant.urls")),  # resto applink
 ]
