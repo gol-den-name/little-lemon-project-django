@@ -1,0 +1,13 @@
+# Pipenv
+.venv/
+Pipfile.lock
+# (Note: Some developers keep Pipfile.lock, but usually you commit it 
+# and ignore the actual environment binaries)
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Database
+db.sqlite3
