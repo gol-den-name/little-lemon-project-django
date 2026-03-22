@@ -1,9 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .forms import bookingForm
+from .models import booking, Menu
 
 
 def index(request):
-    return render(request, "welcome to little lemon", {})
+    return render(request, "index.html")
 
 
 def about(request):
@@ -11,4 +12,15 @@ def about(request):
 
 
 def book(request):
-    return HttpResponse("This is the reservation page.")
+    form = bookingForm()
+    if request.method == "POST":
+        form = bookingForm(request.POST)
+        if form.is_valid():
+            form.save()
+        context = {"form": form}
+        return render(request, "book.html", context)
+
+
+def menu(request):
+    menu_data = Menu.objects.all()
+    return render(request, "menu.html", {"menu_data": menu_data})
