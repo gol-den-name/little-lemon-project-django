@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import bookingForm
+from .forms import BookingForm
 from .models import booking, Menu
 
 
@@ -12,9 +12,9 @@ def about(request):
 
 
 def book(request):
-    form = bookingForm()
+    form = BookingForm()
     if request.method == "POST":
-        form = bookingForm(request.POST)
+        form = BookingForm(request.POST)
         if form.is_valid():
             form.save()
         context = {"form": form}
