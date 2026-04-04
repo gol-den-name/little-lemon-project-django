@@ -1,9 +1,6 @@
 from django.db import models
 
 
-from django.db import models
-
-
 class Booking(models.Model):  # Capital 'B'
     first_name = models.CharField(max_length=200)
     reservation_date = models.DateField()

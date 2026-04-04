@@ -1,0 +1,15 @@
+{% extends 'restaurant/base.html' %}
+{% load static %}
+
+{% block content %}
+<div style="text-align: center;">
+    <h1>About Little Lemon</h1>
+    <p>Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+    
+    <img src="{% static 'img/about.jpg' %}" alt="Our Restaurant" style="width: 100%; max-width: 600px; border-radius: 15px; margin-top: 20px;">
+    
+    <div style="margin-top: 30px; line-height: 1.6;">
+        <p>Based in the heart of Chicago, we pride ourselves on using fresh ingredients sourced from local markets.</p>
+    </div>
+</div>
+{% endblock %}
