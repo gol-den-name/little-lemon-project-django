@@ -1,4 +1,12 @@
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">reserve table</button>
+{% extends 'restaurant/base.html' %}
+
+{% block content %}
+    <div style="text-align: center; padding: 50px 0;">
+        <h1>Welcome to Little Lemon</h1>
+        <p>Authentic Mediterranean cuisine, right in the heart of the city.</p>
+        <hr>
+        <a href="{% url 'book' %}">
+            <button style="font-size: 1.2rem; padding: 15px 30px;">Reserve a Table Now</button>
+        </a>
+    </div>
+{% endblock %}
