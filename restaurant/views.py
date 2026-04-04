@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .forms import BookingForm
-from .models import booking, Menu
+from .models import Booking, Menu
 
 
 def index(request):
@@ -8,7 +8,7 @@ def index(request):
 
 
 def about(request):
-    return render(request, "about us", {})
+    return render(request, "restaurant/about.html", {})
 
 
 def book(request):
@@ -24,4 +24,4 @@ def book(request):
 
 def menu(request):
     menu_data = Menu.objects.all()
-    return render(request, "menu.html", {"menu_data": menu_data})
+    return render(request, "restaurant/menu.html", {"menu_data": menu_data})

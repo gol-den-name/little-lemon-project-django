@@ -1,8 +1,8 @@
 import django.forms as forms
-from .models import booking
+from .models import Booking
 
 
 class BookingForm(forms.ModelForm):
     class Meta:
-        model = booking
+        model = Booking
         fields = "__all__"
