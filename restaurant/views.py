@@ -17,8 +17,9 @@ def book(request):
         form = BookingForm(request.POST)
         if form.is_valid():
             form.save()
-        context = {"form": form}
-        return render(request, "restaurant/book.html", context)
+
+    context = {"form": form}
+    return render(request, "restaurant/book.html", context)
 
 
 def menu(request):
