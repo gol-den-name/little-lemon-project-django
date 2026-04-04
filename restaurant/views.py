@@ -4,7 +4,7 @@ from .models import booking, Menu
 
 
 def index(request):
-    return render(request, "index.html")
+    return render(request, "restaurant/index.html")
 
 
 def about(request):
@@ -18,7 +18,7 @@ def book(request):
         if form.is_valid():
             form.save()
         context = {"form": form}
-        return render(request, "book.html", context)
+        return render(request, "restaurant/book.html", context)
 
 
 def menu(request):
