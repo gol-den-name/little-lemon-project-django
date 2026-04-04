@@ -1,0 +1,36 @@
+{% load static %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Lemon Restaurant</title>
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+    
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #fdfdfd; }
+        nav { background: #495E57; padding: 1rem; color: white; display: flex; justify-content: space-between; align-items: center; }
+        nav a { color: #F4CE14; text-decoration: none; margin-left: 20px; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #F4CE14; }
+        .container { padding: 40px; max-width: 1000px; margin: auto; }
+        button { background: #F4CE14; border: none; padding: 10px 20px; cursor: pointer; border-radius: 8px; font-weight: bold; color: #495E57; }
+        button:hover { background: #e5c113; }
+    </style>
+</head> <body>
+    <nav>
+        <div class="logo">LITTLE LEMON</div>
+        <div>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'book' %}">Reserve</a>
+            <a href="{% url 'menu' %}">Menu</a>
+            <a href="/admin">Admin</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block content %} 
+        {% endblock %}
+    </div>
+</body>
+</html>
